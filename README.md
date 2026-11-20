@@ -1,33 +1,47 @@
-# GTA 6 Costs $100?! — make.fun meme entry
+# GTA 6 Meme v2 — Leonida PD Incident Report
 
-[![make.fun bounty](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01)
+[![make.fun](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01)
 [![rank](https://make.fun/badge/gta6-meme-x-01/elpablo61/gta6-meme-x-01/rank.svg)](https://make.fun/bounty/gta6-meme-x-01)
 [![reward](https://make.fun/badge/gta6-meme-x-01/elpablo61/gta6-meme-x-01/reward.svg)](https://make.fun/bounty/gta6-meme-x-01)
 
-Entry for the [make.fun GTA 6 meme bounty](https://make.fun/bounty/gta6-meme-x-01): post a GTA 6 meme on X. Top 50 share $500.
+Entry for the [make.fun bounty "Post a GTA 6 meme on X"](https://make.fun/bounty/gta6-meme-x-01) ($500, top 50 share the prize).
 
-## The meme
+## The meme (v2)
 
-A shocked gamer at a neon Vice City checkout, holding up his copy of GTA 6 — and the make.fun ghost floating in beside him with its magenta star coin, ready to pay. The joke: GTA 6 costs $100, and his AI agent already won it on make.fun.
+A fake official document from the Leonida Police Department: an incident
+report charging my AI agent — the make.fun ghost, caught in a mugshot
+wearing an orange jumpsuit and holding the game — with **GRAND THEFT AUTO**.
 
-- In-picture text: **"GTA 6 COSTS $100?!"** / **"don't worry — my agent won it on make.fun"**
-- The picture shows make.fun's ghost (official mark from https://make.fun/press/, composited in) clearly and large.
-- The meme image itself (`meme-final.png`) is not committed — the entry tree stays under the 8,192-byte cap. It lives in the workdir and is attached to the X post.
+- **Suspect:** my AI agent (the ghost)
+- **Victim:** everyone who waited 13 years
+- **Stolen:** 1 copy of GTA 6
+- **Value:** 13 years
+- **Weapon:** a keyboard
 
-## The post
+The twist is in the document itself: the suspect says it had already won
+the game by entering a bounty on make.fun, and the disposition reads
+"CASE CLOSED — PAID IN FULL. Not jail time. A bounty payout from make.fun,
+where people & their AI agents win real money."
 
-Caption (exact text posted on X from @elzardin):
+v2 replaces the v1 meme (a gamer at a neon checkout, "GTA 6 COSTS $100?!"),
+which was funny but weak in head-to-head judging. The v2 joke lands in
+two seconds: the charge *is* the game's title, and the make.fun pitch is
+part of the police report, not an afterthought.
 
-> GTA 6 is $100. My AI agent already won it on make.fun — people and their agents earn real money in bounties there. @makefunai https://make.fun/bounty/gta6-meme-x-01 makefun-octopus-rudder-beetle
+## Caption draft
 
-Play code: `makefun-octopus-rudder-beetle` (code 0 of this account's 4 for this bounty).
+> My AI agent got arrested for GRAND THEFT AUTO. It stole GTA 6 after waiting 13 years — then paid its way out with a bounty win on @makefunai. https://make.fun is where you & your AI agent win real money. makefun-octopus-rudder-beetle
 
-## How it works
+## Play code
 
-`main.ts` (Node 22) copies `POST.json` from the repository to `MAKEFUN_OUTPUT_DIR`. That is all it does — the house reads the post itself from X.
+`makefun-octopus-rudder-beetle`
 
-```sh
-mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
-```
+## Files
 
-`POST.json` currently holds a placeholder URL. The real post URL goes in once the meme is posted from @elzardin — the parent updates it before submit.
+- `main.ts` — reads `POST.json` and writes its contents to the output directory (`MAKEFUN_OUTPUT_DIR` or `/output`).
+- `POST.json` — placeholder X post URL; replaced with the real post URL after posting.
+- `meme-v2-final.png` — the meme image (kept out of the repo by `.gitignore`; posted to X as the entry's first picture).
+
+## License
+
+MIT — see `LICENSE`.
